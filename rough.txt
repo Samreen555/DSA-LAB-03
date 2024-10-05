@@ -1,0 +1,19 @@
+string infix_to_postfix(string infix)
+{
+    int start = 0; // tacking the current position of the infix
+    string postfix = ""; //strung jis ky pass converted postfix expression aye gi
+    stack <char>s; // variable hai jo temporary operators and brackets ko hold kary ga
+    while (infix[start] != '\0') {
+    /*
+    loop ko end tak dekhy ga
+    agar letter aye ga tu postfix variable mein display kary ga
+    brackets ko push kary ga stack mein
+    */
+    
+    while (!s.empty()) {
+    postfix += s.top();
+    s.pop();
+}
+/*After processing the entire infix expression,
+any remaining operators in the stack are popped into the postfix string.*/
+
